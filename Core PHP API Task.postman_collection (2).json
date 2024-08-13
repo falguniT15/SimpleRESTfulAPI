@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "9dc08a8f-131a-4d7f-b661-e0db34a15573",
+		"name": "Core PHP API Task",
+		"description": "## Overview\n\nThis API allows users to create, read, update, and delete blog posts. Below are the details of the endpoints and how to interact with them using Postman.\n\n## Endpoints\n\n### 1\\. Create a Post\n\n- **Description:** This endpoint allows you to create a new blog post.\n    \n- **Method:** `POST`\n    \n- **URL:** `http://localhost/apiTask/api.php/posts`\n    \n- jsonCopy code{ \"title\": \"abc\", \"content\": \"sdffffffffffffffffffffffffffffff\", \"author\": \"Falguni Thakor\"}\n    \n- **Response:** Returns the newly created post with its ID.\n    \n\n### 2\\. Update a Post\n\n- **Description:** This endpoint allows you to update an existing blog post.\n    \n- **Method:** `PUT`\n    \n- **URL:** `http://localhost/apiTask/api.php/posts/{id}`\n    \n    - Replace `{id}` with the ID of the post you want to update.\n        \n- jsonCopy code{ \"title\": \"abcdef\", \"content\": \"Post Content\", \"author\": \"Falguni\"}\n    \n- **Response:** Returns the updated post.\n    \n\n### 3\\. Get All Posts\n\n- **Description:** This endpoint retrieves all blog posts.\n    \n- **Method:** `GET`\n    \n- **URL:** `http://localhost/apiTask/api.php/posts`\n    \n- **Response:** A JSON array of all posts, each with its id, title, content, author, created_at, and updated_at.\n    \n\n### 4\\. Get Post by ID\n\n- **Description:** This endpoint retrieves a specific blog post by its ID.\n    \n- **Method:** `GET`\n    \n- **URL:** `http://localhost/apiTask/api.php/posts/{id}`\n    \n    - Replace `{id}` with the ID of the post you want to retrieve.\n        \n- **Response:** The post with the given id, or a 404 if not found.\n    \n\n### 5\\. Delete a Post\n\n- **Description:** This endpoint deletes a post by its ID.\n    \n- **Method:** `DELETE`\n    \n- **URL:** `http://localhost/apiTask/api.php/posts/{id}`\n    \n    - Replace `{id}` with the ID of the post you want to delete.\n        \n- **Response:** A confirmation message or a 404 if the post is not found.\n    \n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17582215"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"abc\",\r\n    \"content\":\"sdffffffffffffffffffffffffffffff\",\r\n    \"author\":\"Falguni Thakor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/apiTask/api.php/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apiTask",
+						"api.php",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"abcdef\",\r\n    \"content\":\"Post Content\",\r\n    \"author\":\"Falguni\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/apiTask/api.php/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apiTask",
+						"api.php",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/apiTask/api.php/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apiTask",
+						"api.php",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get post by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/apiTask/api.php/posts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apiTask",
+						"api.php",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/apiTask/api.php/posts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apiTask",
+						"api.php",
+						"posts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search and Pagination",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/apiTask/api.php/posts?search=EFG&limit=1&offset=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"apiTask",
+						"api.php",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "EFG"
+						},
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
