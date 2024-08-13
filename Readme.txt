@@ -6,7 +6,7 @@ Endpoints
 Description: This endpoint allows you to create a new blog post.
 Method: POST
 URL: http://localhost/apiTask/api.php/posts
-jsonCopy code{ "title": "abc", "content": "abcd", "author": "Falguni"}
+jsonCopy code{ "title": "abc", "content": "sdffffffffffffffffffffffffffffff", "author": "Falguni Thakor"}
 Response: Returns the newly created post with its ID.
 
 2. Update a Post
@@ -42,19 +42,11 @@ Response: A confirmation message or a 404 if the post is not found.
 
 EndFragment
 
-6. Search and Pagination
-Description: This endpoint allows you to search for posts based on their title, author, and content. It also supports pagination to retrieve a subset of posts.
+6.Serach and Pagination
 
+Description: This endpoint will serch post based on title ,auther and content and also for pagination.
 Method: GET
+URL: http://localhost/apiTask/api.php/posts?search=EFG&limit=1&offset=1
 
-URL: http://localhost/apiTask/api.php/posts
-
-Query Parameters:
-
-search (optional): A string to search for in the title and content fields of the posts. The search is case-insensitive and matches partial text.
-author (optional): A string to filter posts by author.
-limit (optional): The number of posts to return per page. Defaults to 10 if not provided.
-offset (optional): The number of posts to skip before starting to return results. Defaults to 0 if not provided.
-Example URL: http://localhost/apiTask/api.php/posts?search=EFG&limit=1&offset=1
 
 
